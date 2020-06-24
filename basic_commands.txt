@@ -9,3 +9,12 @@ git push
 git init
 git remote add origin [ssh]
 git remote -v
+git branch
+git checkout [branch_name] (switching)
+git checkout -b [new_branch_name]
+git diff [branch_name]
+git merge master
+
+git push -u origin feature-readme-instructions
+git branch -d [branch_name]
+git commit -am "" -m "" [for modified files]
