@@ -31,7 +31,7 @@ git reset --hard [hash] ()
 git log --author "author_name" 
 use "git restore --staged <file>..." to unstage)
 git diff --staged
-git rm third.txt (delete from both working and repo)
+git rm third.txt (delete from both working and repo
 [After renaming file run git add and then git rm]
 git mv second.txt pudding.txt
 git mv pudding.txt LoveNotes/patty.txt
