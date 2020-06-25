@@ -1,14 +1,19 @@
+git init (to initialize your git project locally)
 git clone [ssh]
+
+git remote add origin [ssh] (to add local initialized project to github repo, first {git init}, then create an empty repo on github, copy its ssh and use this command)
+git remote -v (to check the connected remote repo)
+
 git status
 git add [./file_name]
-git commit -m "message heading" -m "message description"
+git commit -m "message heading" -m "message description" (commit only)
+git commit -am "message heading" -m "message description" (add and commit, works only with modified files, not newly created files)
+
+
 git push origin master
 git push -u origin master
 git push
 
-git init
-git remote add origin [ssh]
-git remote -v
 git branch
 git checkout [branch_name] (switching)
 git checkout -b [new_branch_name]
