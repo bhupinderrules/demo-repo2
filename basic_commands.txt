@@ -9,6 +9,12 @@ git add [./file_name]
 git commit -m "message heading" -m "message description" (commit only)
 git commit -am "message heading" -m "message description" (add and commit, works only with modified files, not newly created files)
 
+git diff --staged
+git rm third.txt (delete from both working and repo
+[After renaming file run git add and then git rm]
+git mv second.txt pudding.txt
+git mv pudding.txt LoveNotes/patty.txt
+
 git checkout -- index.html (undo unstaged/modified changes)
 git reset HEAD index.html (unstage changes)
 git checkout b071837d03540b1ec8a5d08d9ecb620ade5092a7 -- index.html(get back to a previous commit)
@@ -20,12 +26,6 @@ git push -u origin feature-readme-instructions
 
 git log (shows commit hashes)
 git log --author "author_name" 
-
-git diff --staged
-git rm third.txt (delete from both working and repo
-[After renaming file run git add and then git rm]
-git mv second.txt pudding.txt
-git mv pudding.txt LoveNotes/patty.txt
 
 git checkout -b [new_branch_name]
 git checkout [branch_name] (switching)
