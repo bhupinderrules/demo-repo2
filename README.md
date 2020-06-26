@@ -1,11 +1,4 @@
-#Demo 2
+#Basic git commands
 
-Valuable information
-
-
-#some more  aluable information.
-
-
-## no information was added [changes made here]
-
-Kepp that in mind
+This repo contains some of the basic git commands, This repo was created to learn about git.
+All of the commands mentioned here were learnt from online tutorials like freecodecamp.org and theNewBoston.
