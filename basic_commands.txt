@@ -1,31 +1,42 @@
 git init (to initialize your git project locally)
 git clone [ssh]
 
+
 git remote add origin[or any other name you want] [ssh] (to add local initialized project to github repo, first {git init}, then create an empty repo on github, copy its ssh and use this command)
 git remote -v (to check the connected remote repo)
+
 
 git status
 git add [./file_name]
 git commit -m "message heading" -m "message description" (commit only)
 git commit -am "message heading" -m "message description" (add and commit, works only with modified files, not newly created files)
 
+
+git diff
 git diff --staged
-git rm third.txt (delete from both working and repo
-[After renaming file run git add and then git rm]
-git mv second.txt pudding.txt
+git rm third.txt (delete from both working and repo)
+
+[if we rename file in explorer and then git status, it shows that we have deleted existing file and and created a new one]
+[After renaming file in explorer "run git" add then "git rm", this makes git to think the file has been renamed.]
+
+git mv second.txt pudding.txt (Using this way to rename, git knows you've renamed the file as compared to explorer deletion)
 git mv pudding.txt LoveNotes/patty.txt
+
 
 git checkout -- index.html (undo unstaged/modified changes)
 git reset HEAD index.html (unstage changes)
 git checkout b071837d03540b1ec8a5d08d9ecb620ade5092a7 -- index.html(get back to a previous commit)
+
 
 git push origin[or any other name given when remote was used] master
 git push -u origin master
 git push (one time -u is used, no need to write origin master)
 git push -u origin feature-readme-instructions
 
+
 git log (shows commit hashes)
 git log --author "author_name" 
+
 
 git checkout -b [new_branch_name]
 git checkout [branch_name] (switching)
@@ -34,7 +45,9 @@ git branch -d [branch_to_be_deleted]
 git diff [branch_name] (to see the changes)
 git merge [whose changes you want]
 
+
 git pull(pull the changes to your files from github)
+
 
 git reset README.MD
 git reset HEAD~1
