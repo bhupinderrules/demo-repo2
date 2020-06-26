@@ -9,17 +9,20 @@ git add [./file_name]
 git commit -m "message heading" -m "message description" (commit only)
 git commit -am "message heading" -m "message description" (add and commit, works only with modified files, not newly created files)
 
+git checkout -- index.html (undo unstaged/modified changes)
+git reset HEAD index.html (unstage changes)
+git checkout b071837d03540b1ec8a5d08d9ecb620ade5092a7 -- index.html(get back to a previous commit)
 
 git push origin[or any other name given when remote was used] master
 git push -u origin master
 git push (one time -u is used, no need to write origin master)
 git push -u origin feature-readme-instructions
 
-git branch
-git checkout [branch_name] (switching)
 git checkout -b [new_branch_name]
+git checkout [branch_name] (switching)
+git branch
 git branch -d [branch_to_be_deleted]
-git diff [branch_name]
+git diff [branch_name] (to see the changes)
 git merge [whose changes you want]
 
 git pull(pull the changes to your files from github)
@@ -40,6 +43,3 @@ git mv second.txt pudding.txt
 git mv pudding.txt LoveNotes/patty.txt
 
 
-git checkout -- index.html (undo unstaged/modified changes)
-git reset HEAD index.html (unstage changes)
-git checkout b071837d03540b1ec8a5d08d9ecb620ade5092a7 -- index.html(get back to a previous commit)
