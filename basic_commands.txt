@@ -2,7 +2,8 @@ git init (to initialize your git project locally)
 git clone [ssh]
 
 
-git remote add origin[or any other name you want] [ssh] (to add local initialized project to github repo, first {git init}, then create an empty repo on github, copy its ssh and use this command)
+git remote add origin[or any other name you want] [ssh] (to add local initialized project to github repo, first {git init},
+then create an empty repo on github, copy its ssh and use this command)
 git remote -v (to check the connected remote repo)
 
 
