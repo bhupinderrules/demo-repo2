@@ -12,20 +12,18 @@ git commit -am "message heading" -m "message description" (add and commit, works
 
 git push origin[or any other name given when remote was used] master
 git push -u origin master
-git push
+git push (one time -u is used, no need to write origin master)
+git push -u origin feature-readme-instructions
 
 git branch
 git checkout [branch_name] (switching)
 git checkout -b [new_branch_name]
+git branch -d [branch_to_be_deleted]
 git diff [branch_name]
 git merge [whose changes you want]
 
-git push -u origin feature-readme-instructions
-git branch -d [branch_name]
-git commit -am "" -m "" [for modified files]
+git pull(pull the changes to your files from github)
 
-git pull
-git branch -d [branch_to_be_deleted]
 git reset README.MD
 git reset HEAD~1
 git log (shows commit hashes)
