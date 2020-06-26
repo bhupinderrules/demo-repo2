@@ -53,8 +53,3 @@ git reset README.MD
 git reset HEAD~1
 git reset [commit_hash]
 git reset --hard [hash] ()
-
-
-
-
-
