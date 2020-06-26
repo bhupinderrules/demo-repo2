@@ -1,7 +1,7 @@
 git init (to initialize your git project locally)
 git clone [ssh]
 
-git remote add origin [ssh] (to add local initialized project to github repo, first {git init}, then create an empty repo on github, copy its ssh and use this command)
+git remote add origin[or any other name you want] [ssh] (to add local initialized project to github repo, first {git init}, then create an empty repo on github, copy its ssh and use this command)
 git remote -v (to check the connected remote repo)
 
 git status
@@ -10,7 +10,7 @@ git commit -m "message heading" -m "message description" (commit only)
 git commit -am "message heading" -m "message description" (add and commit, works only with modified files, not newly created files)
 
 
-git push origin master
+git push origin[or any other name given when remote was used] master
 git push -u origin master
 git push
 
@@ -40,3 +40,8 @@ git rm third.txt (delete from both working and repo
 [After renaming file run git add and then git rm]
 git mv second.txt pudding.txt
 git mv pudding.txt LoveNotes/patty.txt
+
+
+git checkout -- index.html (undo unstaged/modified changes)
+git reset HEAD index.html (unstage changes)
+git checkout b071837d03540b1ec8a5d08d9ecb620ade5092a7 -- index.html(get back to a previous commit)
