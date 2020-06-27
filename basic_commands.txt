@@ -26,7 +26,7 @@ git mv pudding.txt LoveNotes/patty.txt
 
 git checkout -- index.html (undo unstaged/modified changes)
 git reset HEAD index.html (unstage changes)
-git checkout b071837d03540b1ec8a5d08d9ecb620ade5092a7 -- index.html(get back to a previous commit)
+git checkout b071837d03540b1ec8a5d08d9ecb620ade5092a7 -- index.html(get back specified file changes from a previous commit)
 
 
 git push origin[or any other name given when remote was used] master
@@ -39,12 +39,15 @@ git log (shows commit hashes)
 git log --author "author_name" 
 
 
-git checkout -b [new_branch_name]
+git checkout -b [new_branch_name] (creating a branch and switching) to it
 git checkout [branch_name] (switching)
 git branch
-git branch -d [branch_to_be_deleted]
+git branch [branch_name_to_be_added]
+git branch -d [branch_to_be_deleted] (locally)
+git branch -D [branch_to_be_deleted] (locally, before merge and giving warning about merge)
+git push origin --delete [branch_name] (remote changes)
 git diff [branch_name] (to see the changes)
-git merge [whose changes you want]
+git merge [branch_name] [whose changes you want]
 
 
 git pull(pull the changes to your files from github)
