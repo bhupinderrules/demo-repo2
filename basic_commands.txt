@@ -1,4 +1,5 @@
-git init (to initialize your git project locally)
+git init (to initialize your git project locally, use this command inside the folder containing files)
+git init [folder_name] (vreate a folder and initialize it)
 git clone [ssh]
 
 
@@ -26,13 +27,14 @@ git mv pudding.txt LoveNotes/patty.txt
 
 git checkout -- index.html (undo unstaged/modified changes)
 git reset HEAD index.html (unstage changes)
+git checkout b071837d03540b1ec8a5d08d9ecb620ade5092a7 (to check the branch, what is in it)
 git checkout b071837d03540b1ec8a5d08d9ecb620ade5092a7 -- index.html(get back specified file changes from a previous commit)
 
 
 git push origin[or any other name given when remote was used] master
-git push -u origin master
-git push (one time -u is used, no need to write origin master)
+git push -u origin [master/branch]
 git push -u origin feature-readme-instructions
+git push (one time -u is used, no need to write origin master)
 
 
 git log (shows commit hashes)
@@ -47,13 +49,14 @@ git branch -d [branch_to_be_deleted] (locally)
 git branch -D [branch_to_be_deleted] (locally, before merge and giving warning about merge)
 git push origin --delete [branch_name] (remote changes)
 git diff [branch_name] (to see the changes)
-git merge [branch_name] [whose changes you want]
+git merge [branch_name] [whose changes you want in the branch you're in right now]
 
 
 git pull(pull the changes to your files from github)
+git pull origin [branch/master]
 
 
-git reset README.MD
-git reset HEAD~1
-git reset [commit_hash]
-git reset --hard [hash] ()
+git reset README.MD/ git reset (unstage changes)
+git reset HEAD~1 (head is a pointer poiting towards last commit, this command makes head point one step before the last commit,last commit will no longer be in the series)
+git reset [commit_hash] (new changes will not be removed)
+git reset --hard [hash] (new changes will also be removed)
