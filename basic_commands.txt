@@ -1,3 +1,5 @@
+[code/any_code_editor] [filename.ext] (will create the file and open it in vscode or any other configured code editor)
+
 git init (to initialize your git project locally, use this command inside the folder containing files)
 git init [folder_name] (vreate a folder and initialize it)
 git clone [ssh]
@@ -14,15 +16,55 @@ git commit -m "message heading" -m "message description" (commit only)
 git commit -am "message heading" -m "message description" (add and commit, works only with modified files, not newly created files)
 
 
-git diff
+git diff (last commit and unsaved changes) (anything passed through the diff command can be passed through the diff command)
 git diff --staged
+git diff [branch_name] (to see the changes)
+git diff [ssh] [ssh]
 git rm third.txt (delete from both working and repo)
 
 [if we rename file in explorer and then git status, it shows that we have deleted existing file and and created a new one]
-[After renaming file in explorer "run git" add then "git rm", this makes git to think the file has been renamed.]
+[After renaming file in explorer run "git add" then "git rm [file_name]", this makes git to think the file has been renamed.]
+
+git add -u (to track/stage deletion) (-u -> update)
+git add -A (to track additions and deletion)
 
 git mv second.txt pudding.txt (Using this way to rename, git knows you've renamed the file as compared to explorer deletion)
 git mv pudding.txt LoveNotes/patty.txt
+
+
+git push origin[or any other name given when remote was used] master
+git push -u origin [master/branch]
+git push -u origin [master/branch] --tags (also push tags)
+git push -u origin feature-readme-instructions
+git push (one time -u is used, no need to write origin master)
+
+
+git log (shows commit hashes)
+git log --author "author_name" 
+git reflog (all the actions taken in the directory)
+
+
+git checkout -b [new_branch_name] (creating a branch and switching) to it
+git checkout [branch_name] (switching)
+git branch/ git branch -a
+git branch [branch_name_to_be_added]
+git branch -d [branch_to_be_deleted] (locally)
+git branch -D [branch_to_be_deleted] (locally, before merge and giving warning about merge)
+git push origin --delete [branch_name] (remote changes)
+
+git merge [branch_name] [whose changes you want in the branch you're in right now]
+
+git pull origin [branch/master]
+git pull(pull the changes to your files from github)
+
+
+git reset README.MD/ git reset (unstage changes)
+git reset HEAD~1 (head is a pointer poiting towards last commit, this command makes head point one step before the last commit,last commit will no longer be in the series)
+git reset [commit_hash] (new changes will not be removed)
+git reset [ssh] --soft (changes only where the head is pointing, preserves staging area and working directory)
+git reset [ssh] --mixed (default, unstages files too)
+git reset [ssh] --hard (unstages files and modifications are also deleted)
+git reset --hard [hash] (new changes will also be removed)
 
 
 git checkout -- index.html (undo unstaged/modified changes)
@@ -31,32 +73,29 @@ git checkout b071837d03540b1ec8a5d08d9ecb620ade5092a7 (to check the branch, what
 git checkout b071837d03540b1ec8a5d08d9ecb620ade5092a7 -- index.html(get back specified file changes from a previous commit)
 
 
-git push origin[or any other name given when remote was used] master
-git push -u origin [master/branch]
-git push -u origin feature-readme-instructions
-git push (one time -u is used, no need to write origin master)
+git ls-files (shows tracked files)
+git config --global alias.hist "log --oneline --graph --decorate --all"
+
+git config  --global --list (all git alias entries)
 
 
-git log (shows commit hashes)
-git log --author "author_name" 
+
+rm -rf [directory] (delete recursively)
+ls -al (list files)
+rm [file_name]
 
 
-git checkout -b [new_branch_name] (creating a branch and switching) to it
-git checkout [branch_name] (switching)
-git branch
-git branch [branch_name_to_be_added]
-git branch -d [branch_to_be_deleted] (locally)
-git branch -D [branch_to_be_deleted] (locally, before merge and giving warning about merge)
-git push origin --delete [branch_name] (remote changes)
-git diff [branch_name] (to see the changes)
-git merge [branch_name] [whose changes you want in the branch you're in right now]
+fast-forward merge (when there is not commits made on the master so there is no conflict and it is like nothing happened)
+.orig files are for conflict resolution
 
 
-git pull(pull the changes to your files from github)
-git pull origin [branch/master]
+git tag [tag-name] (milestones, default at head)
+git tag -d [tag-name] (tag deletion)
+git tag -a [tag-name]c-m "[commit message]" (annotated tags)
+git show [tag-name] (shows info about the tag nad info  )
+
+git stash (save modifications for future use, clean working directory after stash)
+git stash list (shows the stash)
+git stash pop (loads the stash and deletes the last stash)
 
 
-git reset README.MD/ git reset (unstage changes)
-git reset HEAD~1 (head is a pointer poiting towards last commit, this command makes head point one step before the last commit,last commit will no longer be in the series)
-git reset [commit_hash] (new changes will not be removed)
-git reset --hard [hash] (new changes will also be removed)
